@@ -1,8 +1,10 @@
 # Proyecto Cartas
 
 Proyecto donde consumo la API de YGO
-[!image](https://i.postimg.cc/k5BfKWZm/ygo.png)
 
 ## Tecnologías usadas
-- Angular
-- SASS
+- Angular & SASS
+
+Página para mirar las tarjetas de YGO. El buscador funciona para filtrar por nombre 
+
+![mobile-27.png](https://i.postimg.cc/hv430KfY/mobile-27.png)
