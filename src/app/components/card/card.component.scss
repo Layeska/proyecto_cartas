@@ -1,4 +1,7 @@
 .ygo-card {
+    display: flex;
+    justify-content: center;
+
     img {
         height: 100%;
         object-fit: cover;
