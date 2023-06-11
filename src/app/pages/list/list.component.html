@@ -6,11 +6,17 @@
     (scrolled)="onScroll()"
 >
 
-    <input class="form-control" type="text" placeholder="Buscar una Carta" 
-    
-    [formControl]="cardTextFC" />
+    <input
+        class="form-control" type="text"
+        placeholder="Buscar una Carta"
+        [formControl]="cardTextFC"
+    />
 
-    <div class="card">
+    <div class="card" *ngIf="empty !== 0">
         <app-card *ngFor="let item of cards" [card]="item"></app-card>
+    </div>
+
+    <div class="error" *ngIf="error !== 0">
+        <p>No se encontraron coincidencias</p>
     </div>
 </div>
