@@ -1,5 +1,15 @@
 .list {
-    padding: 2rem 5rem;
+    padding: 1rem 1.2rem;
+
+    @media screen and (min-width: 800px) {
+        padding: 2rem 5rem;
+    }
+
+    .error {
+        margin-top: 2rem;
+        text-align: center;
+        font-weight: 800;
+    }
 }
 
 .card {
