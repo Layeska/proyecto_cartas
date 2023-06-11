@@ -1,7 +1,3 @@
-/*export interface Card {
-    data: Datum[];
-}*/
-
 export interface Card {
     id:          number;
     name:        string;
