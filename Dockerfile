@@ -1,19 +1,16 @@
-#Primera Etapa
-FROM node:10-alpine as build-step
-
-RUN mkdir -p /app
+FROM node:alpine
 
 WORKDIR /app
 
-COPY package.json /app
+RUN npm install --global pm2
+
+COPY package*.json ./
 
 RUN npm install
 
-COPY . /app
+COPY . .
 
-RUN npm run build --prod
+RUN npm run build
+EXPOSE 3000
 
-#Segunda Etapa
-FROM nginx:1.17.1-alpine
-	#Si estas utilizando otra aplicacion cambia PokeApp por el nombre de tu app
-COPY --from=build-step /app/dist/proyectocartas /usr/share/nginx/html
+CMD [ "pm2-runtime", "start", "npm", "--", "start" ]
