@@ -15,6 +15,8 @@ export class ListComponent {
 
   cards: Card[] = []
   offset = 0
+  empty: number = 0
+  error: string | number = 0
 
   cardTextFC = new FormControl('')
 
@@ -37,6 +39,7 @@ export class ListComponent {
   searchCards(cardName: string | null = null) {
     this.cardService.getCards(cardName, this.offset).subscribe(res => {
       this.cards = [...this.cards, ...res]
-    })
+      this.cards.length > 1 ? this.empty = this.cards.length : this.empty = 0
+    }, error => this.error = error.status)
   }
 }
