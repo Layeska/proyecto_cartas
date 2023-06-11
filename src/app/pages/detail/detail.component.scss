@@ -1,13 +1,16 @@
 .detail-card {
     display: flex;
     flex-direction: column;
-    background: yellowgreen;
+    background: rgba(252, 252, 252, 0.5);
+    backdrop-filter: blur(10px);
     margin: 2em;
+    border-radius: 10px;
+    padding: 1rem;
 
     @media screen and (min-width: 800px) {
         flex-direction: row;
     }
-    
+
     .top {
         display: flex;
         justify-content: center;
@@ -27,16 +30,39 @@
         align-items: center;
         width: 100%;
         max-width: 1000px;
-        padding: 1em;
+        padding: 1em 2rem;
+
+        .division {
+            display: flex;
+            gap: 10rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 1rem 3rem;
+        }
+
+        .description {
+            text-align: center;
+        }
     }
 
     .item {
         max-width: 500px;
-        text-align: center;
+        text-align: start;
+        width: 100%;
     }
 
     .table {
-        max-width: 400px;
-        background: white;
+        max-width: 500px;
+
+        thead {
+            tr {
+                th {
+                    background: rgb(119, 52, 197);
+                    color: white;
+                }
+            }
+        }
     }
 }

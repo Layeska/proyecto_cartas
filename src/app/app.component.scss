@@ -5,17 +5,26 @@
 }
 
 :host {
-    /*background: sandybrown;*/
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
 }
 
 .content {
     margin: 0;
-    background: palegreen;
     flex: 1;
     position: relative;
+
+    background: hsla(154, 100%, 76%, 1);
+    background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+
+    h1 {
+        text-align: center;
+        padding-top: 1rem;
+        font-weight: 800;
+    }
 
     .cody-img {
         position: fixed;
