@@ -2,7 +2,7 @@ FROM node:alpine
 
 WORKDIR /app
 
-RUN npm install --global pm2
+RUN npm install --global http-server
 
 COPY package*.json ./
 
@@ -11,6 +11,6 @@ RUN npm install
 COPY . .
 
 RUN npm run build
-EXPOSE 3000
+EXPOSE 8080
 
-CMD [ "pm2-runtime", "start", "npm", "--", "start" ]
+CMD [ "http-server", "dist/proyectocartas" ]
